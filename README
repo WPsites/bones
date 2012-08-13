@@ -33,6 +33,13 @@ https://github.com/eddiemachado/bones/issues
 To view Release & Update Notes, read the log.txt file inside
 the library folder.
 
+*********************
+
+Updates from WPsites
+
+- Add tinymce style drop down and associated .less file (enable in functions.php)
+- Add wp-less as a submodule for compiling .less files with less.js or PHP (enable in functions.php)
+
 ******************************************************************/
 
 /* v1.25 update */
