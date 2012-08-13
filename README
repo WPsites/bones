@@ -20,6 +20,17 @@ License: WTFPL
 License URI: http://sam.zoy.org/wtfpl/
 Are You Serious? Yes.
 
+## Installation:
+
+If you are using git to clone the repository do the following:
+
+    git clone git://github.com/WPsites/bones.git bones
+    git submodule update --init
+
+If you are downloading the zip or tar don't forget to download the lessphp
+dependency too https://github.com/WPsites/wp-less/zipball/master and copy it into the `wp-less`
+folder.
+
 Special Thanks to:
 Paul Irish & the HTML5 Boilerplate
 Yoast for some WP functions & optimization ideas
