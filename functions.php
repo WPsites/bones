@@ -45,6 +45,17 @@ require_once('library/custom-post-type.php'); // you can disable this if you lik
 */
 // require_once('library/translation/translation.php'); // this comes turned off by default
 
+/*
+5. library/tinymce-styles-dropdown.php
+    - adds a style dropdown to tinymce for applying styles
+    - default stylesheet for this is library/less/editor-style.less
+    - point it to scss or just css if you like by editing tinymce-styles-dropdown.php
+    - tinymce-styles-dropdown.php contains 
+*/
+//require_once('library/tinymce-styles-dropdown.php'); // you can disable this if you like
+
+
+
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
