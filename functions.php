@@ -52,8 +52,14 @@ require_once('library/custom-post-type.php'); // you can disable this if you lik
     - point it to scss or just css if you like by editing tinymce-styles-dropdown.php
     - tinymce-styles-dropdown.php contains 
 */
-//require_once('library/tinymce-styles-dropdown.php'); // you can disable this if you like
+// require_once('library/tinymce-styles-dropdown.php'); // you can disable this if you like
 
+/*
+6. wp-less/wp-less.php
+    - use the wp-less compiler https://github.com/WPsites/wp-less
+    - to enable the less.js compiler add this below: add_action( 'init', array( 'wp_less', 'use_js' ), 20 );
+*/
+// require_once( 'wp-less/wp-less.php' );
 
 
 /************* THUMBNAIL SIZE OPTIONS *************/
