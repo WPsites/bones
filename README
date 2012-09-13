@@ -25,7 +25,7 @@ Are You Serious? Yes.
 If you are using git to clone the repository do the following:
 
     git clone git://github.com/WPsites/bones.git bones
-    git submodule update --init
+    git submodule update --init --recursive
 
 If you are downloading the zip or tar don't forget to download the lessphp
 dependency too https://github.com/WPsites/wp-less/zipball/master and copy it into the `wp-less`
