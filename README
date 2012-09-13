@@ -31,6 +31,12 @@ If you are downloading the zip or tar don't forget to download the wp-less
 dependency https://github.com/WPsites/wp-less/zipball/master and copy it into the `wp-less`
 folder and download the lessphp dependency too from https://github.com/leafo/lessphp and copy it into the wp-less/lessc folder.
 
+## Enable .LESS:
+
+In functions.php you need to include wp-less.php to compile the stylesheets (feature 6). In library/bones.php you'll need to alter the stylesheet enqueuing to include the .Less file rather than .css 
+
+The .LESS stylesheets can be found in library/less/
+
 Special Thanks to:
 Paul Irish & the HTML5 Boilerplate
 Yoast for some WP functions & optimization ideas
