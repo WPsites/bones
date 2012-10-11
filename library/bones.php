@@ -143,6 +143,13 @@ function bones_scripts_and_styles() {
     */
     wp_enqueue_script( 'jquery' ); 
     wp_enqueue_script( 'bones-js' ); 
+
+    //output ajaxurl variable on client side
+    ?>
+        <script type="text/javascript">
+        var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+        </script>
+    <?php
     
   }
 }
