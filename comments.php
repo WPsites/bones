@@ -19,8 +19,7 @@ The comments page for Bones
 <!-- You can start editing here. -->
 
 <?php if ( have_comments() ) : ?>
-	
-	<h3 id="comments" class="h2"><?php comments_number('<span>No</span> Responses', '<span>One</span> Response', '<span>%</span> Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+	<h3 id="comments" class="h2"><?php comments_number(__('<span>No</span> Responses', 'bonestheme'), __('<span>One</span> Response', 'bonestheme'), _n('<span>%</span> Response', '<span>%</span> Responses', get_comments_number(),'bonestheme') );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
 	<nav id="comment-nav">
 		<ul class="clearfix">
@@ -48,7 +47,7 @@ The comments page for Bones
 	<?php else : // comments are closed ?>
 	
 	<!-- If comments are closed. -->
-	<p class="nocomments"><?php _e("Comments are closed.", "bonestheme"); ?></p>
+	<!--p class="nocomments"><?php _e("Comments are closed.", "bonestheme"); ?></p-->
 
 	<?php endif; ?>
 
@@ -67,7 +66,7 @@ The comments page for Bones
 
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
   	<div class="alert help">
-  		<p><?php printf( 'You must be %1$slogged in%2$s to post a comment.', '<a href="<?php echo wp_login_url( get_permalink() ); ?>">', '</a>' ); ?></p>
+  		<p><?php printf( __('You must be %1$slogged in%2$s to post a comment.', 'bonestheme'), '<a href="<?php echo wp_login_url( get_permalink() ); ?>">', '</a>' ); ?></p>
   	</div>
 	<?php else : ?>
 
@@ -75,19 +74,19 @@ The comments page for Bones
 
 	<?php if ( is_user_logged_in() ) : ?>
 
-	<p class="comments-logged-in-as"><?php _e("Logged in as", "bonestheme"); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account"><?php _e("Log out", "bonestheme"); ?> &raquo;</a></p>
+	<p class="comments-logged-in-as"><?php _e("Logged in as", "bonestheme"); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e("Log out of this account", "bonestheme"); ?>"><?php _e("Log out", "bonestheme"); ?> <?php _e("&raquo;", "bonestheme"); ?></a></p>
 
 	<?php else : ?>
 	
 	<ul id="comment-form-elements" class="clearfix">
 		
 		<li>
-		  <label for="author"><?php _e("Name", "bonestheme"); ?> <?php if ($req) echo "(required)"; ?></label>
+		  <label for="author"><?php _e("Name", "bonestheme"); ?> <?php if ($req) _e("(required)"); ?></label>
 		  <input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" placeholder="<?php _e('Your Name*', 'bonestheme'); ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 		</li>
 		
 		<li>
-		  <label for="email"><?php _e("Mail", "bonestheme"); ?> <?php if ($req) echo "(required)"; ?></label>
+		  <label for="email"><?php _e("Mail", "bonestheme"); ?> <?php if ($req) _e("(required)"); ?></label>
 		  <input type="email" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" placeholder="<?php _e('Your E-Mail*', 'bonestheme'); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 		  <small><?php _e("(will not be published)", "bonestheme"); ?></small>
 		</li>
